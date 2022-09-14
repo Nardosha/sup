@@ -37,41 +37,35 @@ p {
 /*--- HEADER ---*/
 
 .header {
-  background-image: url("../images/header-bg.jpg");
+  background: url("../images/header-bg.jpg") no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh;
-  background-position: center;
   position: relative;
+  margin-bottom: 100px;
 }
-
 .header::before {
   content: "";
+  background: url('../images/header-decor.svg') no-repeat center;
   position: absolute;
-  background: url('../images/header-decor.svg');
   bottom: 0;
   left: 0;
   right: 0;
   height: 456px;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: translateY(35%);
+  transform: translateY(45%);
   z-index: 2;
 }
 
 .header::after {
   content: "";
+  background: url('../images/header-decor.svg') no-repeat center;
   position: absolute;
-  background: url('../images/header-decor.svg');
   bottom: 0;
   left: 0;
   right: 0;
   height: 456px;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: translateY(75%) rotate(180deg);
+  transform: translateY(85%) rotate(180deg);
   z-index: 3;
 }
 
@@ -178,4 +172,65 @@ font-size: 24px
   right: 145px;
 }
 
+/*------------ INFO -------------*/
+.info {
+  background: url('/images/info-bg.jpg') center/cover no-repeat;
+  position: relative;
+}
 
+.info::before {
+  content: "";
+  position: absolute;
+  height: 180px;
+  background-color: #262C27;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-120px);
+  z-index: 1;
+}
+
+.info__top {
+  display: flex;
+  gap: 80px;
+  padding-top: 130px;
+}
+
+.info__top-text {
+  padding-top: 245px;
+  width: 290px;
+  color: #fff;
+  position: relative;
+}
+
+.info__top-img {
+  position: relative;
+  z-index: 5;
+}
+
+/*--- button ---*/
+.button-play {
+  text-align: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-play span {
+  display: block;
+  padding-top: 12px;
+  color: #fff;
+}
+
+.info__top-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.top__text-left {
+  padding-bottom: 125px;
+}
+.top__text-right {
+  border-bottom: 1px solid #fff;
+}
